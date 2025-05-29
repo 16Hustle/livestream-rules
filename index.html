@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy Định Phòng Livestream - LSOUL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F7F5;
+            color: #333333;
+        }
+        h1, h2, h3, .brand-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #1A1A1A;
+        }
+        .lsoul-header {
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .tab-button {
+            padding: 1rem 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #666666;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .tab-button.active {
+            color: #1A1A1A;
+            border-bottom-color: #1A1A1A;
+        }
+        .tab-button:hover:not(.active) {
+            color: #333333;
+        }
+        .content-section {
+            display: none;
+            background-color: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        @media (min-width: 640px) {
+            .content-section {
+                padding: 2rem;
+            }
+        }
+        .content-section.active {
+            display: block;
+        }
+        .content-section h2 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .content-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #282828;
+        }
+        .content-section p, .content-section li {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #4A4A4A;
+        }
+        .content-section ul, .content-section ol {
+            padding-left: 1.5rem; /* Base padding for lists */
+            margin-bottom: 1rem;
+        }
+        .content-section ul {
+            list-style-type: disc; /* Round dots for main unordered lists */
+        }
+        .content-section ol {
+            list-style-type: decimal; /* Numbers for ordered lists */
+        }
+        .content-section li {
+            margin-bottom: 0.5rem; /* Spacing between list items */
+        }
+        .content-section ul ul { /* Nested unordered lists */
+            list-style-type: circle; /* Open circle for nested lists */
+            margin-top: 0.25rem;
+            margin-left: 1rem; /* Additional indentation for nested lists */
+            padding-left: 1rem; /* Specific padding for nested list bullets */
+        }
+        .list-label { /* Class for labels like "Khung hình:" that shouldn't have a bullet */
+            list-style-type: none;
+            margin-bottom: 0.25rem; /* Small space before the nested list */
+        }
+        .list-label > span { /* Style for the text of the label */
+            font-weight: 500; /* Medium weight for label */
+            color: #383838;
+        }
+
+        .content-section strong {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+        .emphasis-text {
+            font-weight: 600;
+            color: #D32F2F;
+        }
+        .important-note {
+            background-color: #FFF9C4;
+            border-left: 4px solid #FFC107;
+            padding: 1rem;
+            margin-top: 2rem; /* Increased margin-top for better separation */
+            border-radius: 4px;
+            color: #5D4037;
+        }
+        .important-note p {
+             color: #5D4037;
+        }
+        .important-note strong {
+            color: #D84315;
+            font-style: normal;
+        }
+        .footer {
+            border-top: 1px solid #EAEAEA;
+            color: #666666;
+        }
+        .tabs-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .tabs-container::-webkit-scrollbar-thumb {
+            background-color: #cccccc;
+            border-radius: 2px;
+        }
+        .tabs-container::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="lsoul-header bg-white py-4 sm:py-6">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h1 class="brand-title text-3xl sm:text-4xl font-bold tracking-tight">LSOUL</h1>
+            <p class="text-lg sm:text-xl text-gray-600 mt-1 uppercase">Quy Định Phòng Livestream</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+        <div class="mb-6 sm:mb-8">
+            <nav class="tabs-container flex overflow-x-auto pb-2 -mb-px md:flex-wrap md:justify-center md:overflow-visible md:pb-0 md:mb-0">
+                <button data-tab="muc-dich" class="tab-button active text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">I. MỤC ĐÍCH</button>
+                <button data-tab="quy-dinh-chung" class="tab-button text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">II. QUY ĐỊNH CHUNG</button>
+                <button data-tab="vai-tro" class="tab-button text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">III. VAI TRÒ & TRÁCH NHIỆM</button>
+                <button data-tab="bo-sung" class="tab-button text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">IV. QUY ĐỊNH BỔ SUNG</button>
+                <button data-tab="che-tai" class="tab-button text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">V. CHẾ TÀI XỬ LÝ</button>
+                <button data-tab="loi-ket" class="tab-button text-sm px-3 py-2 sm:text-base sm:px-4 sm:py-3 md:px-4 lg:px-6">VI. LỜI KẾT</button>
+            </nav>
+        </div>
+
+        <div id="tab-content">
+            <section id="muc-dich" class="content-section active">
+                <h2 class="text-xl sm:text-2xl">I. MỤC ĐÍCH</h2>
+                <ol>
+                    <li>Đảm bảo tính chuyên nghiệp, xây dựng hình ảnh <strong>LSOUL</strong> với chất lượng phiên live tương xứng với giá trị thương hiệu.</li>
+                    <li>Tối ưu hóa hiệu quả: Gia tăng tỷ lệ chuyển đổi đơn hàng và tương tác của khách hàng.</li>
+                    <li>Thống nhất quy trình: Giúp tất cả các thành viên trong ekip phối hợp nhịp nhàng, hiệu quả.</li>
+                    <li>Bảo vệ hình ảnh thương hiệu: Tránh các sai sót không đáng có gây ảnh hưởng tiêu cực đến <strong>LSOUL</strong>.</li>
+                </ol>
+            </section>
+
+            <section id="quy-dinh-chung" class="content-section">
+                <h2 class="text-xl sm:text-2xl">II. QUY ĐỊNH CHUNG TRƯỚC, TRONG VÀ SAU PHIÊN LIVE</h2>
+                <h3>Tác phong và thái độ:</h3>
+                <ul>
+                    <li>Không được ăn uống trong khung hình, nếu có nhu cầu có thể nhờ Trợ live đứng vô tư vấn sản phẩm để mình đi ăn uống sau đó nhanh chóng xuất hiện lại trong khung live tránh việc để trợ live phải đứng trong khung live quá lâu.</li>
+                    <li>Luôn giữ thái độ tích cực, vui vẻ, nhiệt tình và chuyên nghiệp.</li>
+                    <li>Giao tiếp lịch sự, tôn trọng với đồng nghiệp và khách hàng.</li>
+                    <li>Mẫu (Host Live) và Trợ live (Standby Support) khi xuất hiện trong khung hình cần phải chỉnh chu về trang phục, make up, tóc tai và không được đi chân trần khi bước vô khung hình.</li>
+                    <li>Dù không cần xuất hiện trong khung hình nhiều nhưng trang phục của Trợ live (Standby Support) cũng cần phải chú trọng, yêu cầu mặc quần dài, ống xuông khi đi làm.</li>
+                    <li><span class="emphasis-text">Tuyệt đối không</span> sử dụng từ ngữ thô tục, phản cảm, gây tranh cãi hoặc công kích cá nhân.</li>
+                </ul>
+
+                <h3>Thời gian và Kỷ luật:</h3>
+                <ul>
+                    <li>Hạn chế tối đa việc đi trễ. Trường hợp bất khả kháng (sự cố cá nhân nghiêm trọng, sức khỏe), phải thông báo cho Quản lý hoặc người điều hành (Monitor) trực ca đó ngay lập tức và ít nhất 2 tiếng trước giờ live trên lịch.</li>
+                    <li>Mức trễ tối đa được chấp nhận trong trường hợp bất khả kháng đã báo cáo là 30 phút. Việc đi trễ thường xuyên hoặc không báo cáo sẽ bị xem xét kỷ luật theo chế tài ở mục V.</li>
+                    <li>Hủy ca: Mẫu (Host Live) và Trợ live (Standby Support) phải báo hủy ca cho Quản lý (Leader) hoặc ít nhất 1 ngày (24 tiếng) trước lịch live để có phương án sắp xếp nhân sự thay thế. Hủy ca đột xuất không có lý do chính đáng sẽ bị xử lý nghiêm.</li>
+                </ul>
+
+                <h3>Chuẩn bị sản phẩm (Trách nhiệm chính: Trợ live, phối hợp: Mẫu, Monitor):</h3>
+                <ul>
+                    <li>Kiểm tra kỹ lưỡng: Tất cả sản phẩm phải được kiểm tra về chất lượng, màu sắc, kích cỡ, không bị lỗi, bẩn (những vết bẩn nhỏ khó thấy thì vẫn có thể sử dụng nhưng cần báo cho Monitor trực biết thông tin)</li>
+                    <li>Ủi phẳng, treo móc: Sản phẩm phải được ủi thẳng thớm, không nhăn nhúm và treo ngay ngắn trên móc trước khi đưa lên sóng.</li>
+                    <li>Nắm rõ thông tin sản phẩm (chất liệu, size, giá, ưu điểm nổi bật, chương trình khuyến mãi áp dụng) về phần này Monitor cần phải phổ biến cho Mẫu (Host Live) và Trợ Live (Standby Support) biết trước khi phiên live bắt đầu</li>
+                </ul>
+
+                <h3>Không gian livestream:</h3>
+                <ul>
+                    <li>Trách nghiệm chung: luôn giữ gìn khu vực livestream sạch sẽ, gọn gàng, chuyên nghiệp.</li>
+                    <li><span class="emphasis-text">TUYỆT ĐỐI KHÔNG</span> để xuất hiện đồ ăn, thức uống hoặc các vật dụng cá nhân không liên quan trong khung hình và khu vực background, nếu có thì phải đựng trong chai/ly/hộp kín đáo và để ở vị trí khuất tầm nhìn camera.</li>
+                </ul>
+
+                <h3>Bảo mật thông tin:</h3>
+                <ul>
+                    <li>Không tiết lộ thông tin nội bộ, doanh số, chiến lược kinh doanh, thông tin khách hàng của <strong>LSOUL</strong> cho bên thứ ba khi chưa được phép.</li>
+                </ul>
+            </section>
+
+            <section id="vai-tro" class="content-section">
+                <h2 class="text-xl sm:text-2xl">III. VAI TRÒ & TRÁCH NHIỆM</h2>
+                <h3>Mẫu Livestream (Host Live):</h3>
+                <ul>
+                    <li>Là gương mặt đại diện của <strong>LSOUL</strong> trong phiên live nên luôn cần giữ thần thái tự tin, thu hút không được tỏ ra mệt mỏi, uể oải trong suốt quá trình live.</li>
+                    <li>Trong lúc live tập trung giới thiệu về chi tiết về sản phẩm bao gồm chất liệu, form dáng từ những chi tiết nhỏ nhất và công dụng của những chi tiết đó rồi tới cách phối đồ, celeb pick. Luôn có ý thức pose dáng đa dạng để tôn vinh vẻ đẹp của sản phẩm và vóc dáng người mặc.</li>
+                    <li>Tương tác với khách hàng: Đọc bình luận, trả lời câu hỏi của khách một cách thân thiện, khéo léo và luôn kêu gọi hành động trong phiên live (like, share, comment, check out). VD khi khách đã checkout đơn hàng vẫn có thể kêu khách quay lại cmt "đã chốt" để push đi đơn sớm, tặng túi,...</li>
+                    <li>Cần phối hợp nhịp nhàng với Trợ Live (Standby Support) và Monitor tránh tranh nhau nói, hoặc nhường nhau nói mà tạo ra những khoảng lặng trong live.</li>
+                    <li>Cần nắm rõ thông tin về các chương trình trước buổi live để có thể thông báo các chương trình, mã giảm giá, deal list tới khách hàng chính xác nhất.</li>
+                </ul>
+
+                <h3>Trợ Live (Standby Support):</h3>
+                <ul>
+                    <li>Hỗ trợ Mẫu: Chuẩn bị sẵn sàng sản phẩm tiếp theo, hỗ trợ Mẫu thay đồ nhanh chóng.</li>
+                    <li>Quản lý sản phẩm: Đảm bảo sản phẩm luôn được giữ gìn cẩn thận, luôn được móc gọn gàng phẳng phiu trước khi tư vấn cho khách.</li>
+                    <li>Hỗ trợ tư vấn: Cung cấp nhanh chóng và chính xác thông tin sản phẩm (size, màu còn lại, số lượng tồn kho, giá chính xác sau khuyến mãi) cho khách khi được yêu cầu.</li>
+                    <li class="list-label"> <span>Khung hình:</span>
+                        <ul>
+                           <li>Trợ live (Standby Support) không cần xuất hiện trong khung hình livestream khi Mẫu đang lên sóng.</li>
+                           <li>Trong trường hợp Mẫu (Host Live) cần thay đổi trang phục và rời khỏi khung hình. Trợ Live có thể vô thế chỗ nhưng cần cầm theo sản phẩm để tư vấn về sản phẩm không được để người trống bước vô khung hình.</li>
+                        </ul>
+                    </li>
+                    <li>Sau live: Chịu trách nhiệm chính trong việc thu dọn toàn bộ sản phẩm, treo đồ gọn gàng lên sào sau đó kiểm tra lại toàn bộ phòng gom rác về đúng chỗ dẹp góc live sạch sẽ giày, boot, cao gót cũng cần để lại ngăn nắp.</li>
+                </ul>
+
+                <h3>Nhân viên Giám sát (Monitor):</h3>
+                <ul>
+                    <li>Kỹ thuật: Đảm bảo chất lượng âm thanh, ánh sáng, đường truyền internet ổn định trong suốt phiên live. Xử lý nhanh các sự cố kỹ thuật phát sinh.</li>
+                    <li>Nội dung: Theo dõi kịch bản, đảm bảo Mẫu truyền tải đúng và đủ thông điệp, chương trình khuyến mãi.</li>
+                    <li>Tương tác: Theo dõi sát sao bình luận của khách hàng, lọc các câu hỏi quan trọng/cần giải đáp để Mẫu hoặc Trợ live trả lời. Hỗ trợ trả lời bình luận qua comment nếu cần thiết.</li>
+                    <li>Quản lý đơn hàng/voucher (nếu có): Hỗ trợ ghim sản phẩm, tạo và quản lý voucher trên hệ thống của sàn TMĐT.</li>
+                    <li>Điều phối chung: Giữ vai trò điều phối, đảm bảo sự phối hợp nhịp nhàng giữa Mẫu và Trợ live. Đưa ra các nhắc nhở cần thiết để phiên live diễn ra đúng hướng.</li>
+                    <li>Báo cáo các chỉ số quan trọng sau phiên live cho Quản lý.</li>
+                </ul>
+                <div class="important-note">
+                    <p><strong>Lưu ý:</strong> Trách nghiệm giữ phòng Live sạch sẽ là trách nghiệm chung cần mọi người tự có ý thức nhắc nhở nhau.</p>
+                </div>
+            </section>
+
+            <section id="bo-sung" class="content-section">
+                <h2 class="text-xl sm:text-2xl">IV. CÁC QUY ĐỊNH BỔ SUNG</h2>
+                <ol>
+                    <li>Kịch bản livestream: Toàn bộ ekip phải nắm rõ kịch bản trước khi lên live đặc biệt là vào những ngày sale lớn theo sự chỉ định của Monitor.</li>
+                    <li>Xử lý khủng hoảng: Khi có sự cố bất ngờ (bình luận tiêu cực, sự cố kỹ thuật nghiêm trọng), phải giữ bình tĩnh, xử lý chuyên nghiệp theo hướng dẫn của Monitor hoặc Quản lý. <span class="emphasis-text">Tuyệt đối không</span> đôi co, tranh cãi với khách hàng trên sóng.</li>
+                    <li>Tuân thủ chính sách nền tảng: Nghiêm túc tuân thủ mọi quy định, chính sách của sàn TMĐT về việc livestream bán hàng.</li>
+                    <li>Tinh thần đồng đội: Luôn hỗ trợ, hợp tác và tôn trọng lẫn nhau để xây dựng một ekip làm việc hiệu quả và vui vẻ.</li>
+                </ol>
+            </section>
+
+            <section id="che-tai" class="content-section">
+                <h2 class="text-xl sm:text-2xl">V. CHẾ TÀI XỬ LÝ VI PHẠM</h2>
+                <p>Việc không tuân thủ các quy định trên, tùy theo mức độ nghiêm trọng và tần suất tái phạm, sẽ bị xử lý theo các hình thức:</p>
+                <ul>
+                    <li>Nhắc nhở riêng.</li>
+                    <li>Tạm ngưng sắp xếp lịch livestream.</li>
+                    <li>Chấm dứt hợp tác.</li>
+                </ul>
+            </section>
+
+            <section id="loi-ket" class="content-section">
+                <h2 class="text-xl sm:text-2xl">VI. Lời kết</h2>
+                <p>Bộ quy định này có hiệu lực kể từ ngày ban hành 28/5/2025. Rất mong nhận được sự hợp tác và tuân thủ nghiêm túc từ tất cả các thành viên để mỗi phiên livestream của <strong>LSOUL</strong> đều thành công tốt đẹp và mang lại trải nghiệm mua sắm tuyệt vời cho khách hàng.</p>
+                <p class="mt-4"><strong>Trân trọng,</strong></p>
+                <p class="mt-1"><strong>Ecommerce Team.</strong></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer text-center py-6 sm:py-8 mt-8 sm:mt-12">
+        <p class="text-sm">&copy; <span id="year"></span> LSOUL. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                contentSections.forEach(section => section.classList.remove('active'));
+
+                button.classList.add('active');
+                const targetTab = button.getAttribute('data-tab');
+                document.getElementById(targetTab).classList.add('active');
+                const contentTop = document.getElementById('tab-content').offsetTop - 80; 
+                window.scrollTo({ top: contentTop > 0 ? contentTop : 0, behavior: 'smooth' });
+            });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
